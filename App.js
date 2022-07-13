@@ -8,10 +8,12 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{
+      <Stack.Navigator
+      initialRouteName='Login'
+      screenOptions={{
         animation: 'flip',
       }}>
-        <Stack.Screen name='Beranda' component={HomeScreen} />
+        <Stack.Screen name='Home' component={HomeScreen} />
         <Stack.Screen name='Login' component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
